@@ -89,11 +89,11 @@ namespace DodgeGame
                 player.X += playerSpeed;
             }
 
-            if (leftDown == true)
+            if (leftDown == true && player.X > 0)
             {
                 player.X -= playerSpeed;
             }
-            if (upDown == true)
+            if (upDown == true && player.Y > 0)
             {
                 player.Y -= playerSpeed;
             }
