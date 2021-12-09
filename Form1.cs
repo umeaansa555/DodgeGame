@@ -101,6 +101,8 @@ namespace DodgeGame
             {
                 player.Y += playerSpeed;
             }
+
+            Refresh();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
