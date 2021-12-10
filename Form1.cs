@@ -23,8 +23,8 @@ namespace DodgeGame
 
         int leftSpeed = 8;
         int rightSpeed = 8;
-        int leftCounter;
-        int rightCounter;
+        int leftCounter = 0;
+        int rightCounter = 0;
 
         bool leftDown = false;
         bool rightDown = false;
@@ -107,7 +107,15 @@ namespace DodgeGame
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(whiteBrush, player);
+            e.Graphics.FillRectangle(goldBrush, player);
+            for (int i = 0; i < leftCounter.Count(); i++)
+            {
+                    e.Graphics.FillEllipse(whiteBrush, leftEnemies[i]);
+            }
+            for (int i = 0; i < rightCounter.Count(); i++)
+            {
+                e.Graphics.FillEllipse(whiteBrush, rightEnemies[i]);
+            }
         }
     }
 }
