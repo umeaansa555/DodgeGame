@@ -17,7 +17,7 @@ namespace DodgeGame
         new Rectangle player = new Rectangle(40, 300, 20, 20);
         int playerSpeed = 10;
 
-        List<Rectangle> leftEnemies = new List<Rectangle>(); //(60, 0, 15, 60);
+        List<Rectangle> leftEnemies = new List<Rectangle>();
         List<Rectangle> rightEnemies = new List<Rectangle>(); //(0,0,30,90); // (360, this.height - obstacleHeight, 15, 60);
         int obstacleHeight = 60;
 
@@ -102,7 +102,18 @@ namespace DodgeGame
                 player.Y += playerSpeed;
             }
 
-            Refresh();
+
+            //
+
+            if (leftEnemies.X < 0)
+            {
+                //int x = randGen.Next(10, this.Width - ballSize * 2);
+                leftEnemies.Add(new Rectangle(60, 0, 15, 60);
+                //leftSpeed.Add();
+            }
+
+
+                Refresh();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
